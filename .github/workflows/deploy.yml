@@ -5,7 +5,6 @@ on:
     branches: ['main', 'master']
   workflow_dispatch:
 
-# 設定 GitHub Actions 發布 Pages 的權限
 permissions:
   contents: read
   pages: write
@@ -19,22 +18,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build Project
+      - name: Build
         run: npm run build
 
-      - name: Upload Pages Artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
