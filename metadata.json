@@ -1,0 +1,6 @@
+{
+  "name": "Mini Mario Platformer",
+  "description": "經典 2D 橫向卷軸瑪利歐小遊戲，具備跳躍、踩怪、金幣收集、隱藏道具與終點旗桿。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
